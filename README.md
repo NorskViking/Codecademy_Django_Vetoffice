@@ -8,7 +8,7 @@ This project is a personal project, for learning Django and its many functions.
 
 The Vetoffice is a learning project provided in the codecademy skill path, for learning how to build a python web app with Django. I will be using the basics from this project, and expand and build upon it. In this project, I will be using Django, Python, SQLite, HTML, CSS and Git, for development, designing and deploying the project.
 
-Any and all names and other information used for filling the database and other variables, are complete fabrication, and have no relation to any real physical entities. 
+Any and all names and other information used for filling the database and other variables, are complete fabrication, and have no relation to any real physical entities.
 
 ## Planed Expansion
 
@@ -60,7 +60,30 @@ The following are the key topics I hope to learn
 * Build and style webpages with semantic HTML and CSS.
 * Using GIT for version control.
 
+## What is used
+
+* Python 3.8.10
+* Django 3.2.8
+* HTML
+* CSS
+* Atom
+	* Linter
+	* Emmet
+	* Atom-Beautify
+	* Git-Pluss
+	* Pigments
+	* Color-Picker
+	* Minimap
+	* TODO-Show
+	* Autoclose-HTML
+	* Atom-Django
+
 ## Links
 
 * [Codecademy](https://codecademy.com)
 * [Codecademy - Django Web App](https://codecademy.com/learn/paths/build-python-web-apps-with-django)
+* [Python](https://www.python.org/)
+* [Django](https://www.djangoproject.com/)
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [CSS](https://www.w3schools.com/css/)
+* [Atom](https://atom.io/)
