@@ -67,7 +67,7 @@ The following are the key topics I hope to learn
 * SQLite3 3.31.1
 * HTML
 * CSS
-* Atom
+* Atom 1.57.0
 	* Linter
 	* Emmet
 	* Atom-Beautify
