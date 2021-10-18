@@ -64,6 +64,7 @@ The following are the key topics I hope to learn
 
 * Python 3.8.10
 * Django 3.2.8
+* SQLite3 3.31.1
 * HTML
 * CSS
 * Atom
@@ -84,6 +85,7 @@ The following are the key topics I hope to learn
 * [Codecademy - Django Web App](https://codecademy.com/learn/paths/build-python-web-apps-with-django)
 * [Python](https://www.python.org/)
 * [Django](https://www.djangoproject.com/)
+* [SQLite](https://www.sqlite.org/index.html)
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [CSS](https://www.w3schools.com/css/)
 * [Atom](https://atom.io/)
