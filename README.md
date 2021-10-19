@@ -44,7 +44,6 @@ The following are the key topics I hope to learn
 	* Class vs. id
 	* Positioning and floats
 	* Color: hexadecimal, rgb and named
-	* ...
 * Git & Git Workflow
 	* Version Controll
 	* git add
@@ -54,6 +53,7 @@ The following are the key topics I hope to learn
 
 ## Personal Learning Objectives
 
+* Training towards becoming a full-stack developer.
 * Learning how to desgin a web app with Django.
 * Learning and using the Django MTV model.
 * Designing and using SQLite databases.

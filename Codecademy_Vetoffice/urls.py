@@ -20,5 +20,5 @@ from django.http import HttpResponse
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('vetoffice/', include('vetoffice.urls')),
-    path('', lambda request: HttpResponse('This response worked!')),
+    path('', lambda request: HttpResponse('You are seeing this, as the server does at this moment, dont open the correct url at start.')),
 ]
