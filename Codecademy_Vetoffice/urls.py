@@ -19,6 +19,7 @@ from django.http import HttpResponse
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('vetoffice/', include('vetoffice.urls')),
-    path('', lambda request: HttpResponse('You are seeing this, as the server does at this moment, dont open the correct url at start.')),
+    path('', include('vetoffice.urls')),
+    #path('home/', include('vetoffice.urls')),
+    #path('', lambda request: HttpResponse('The website is currently under construction')),
 ]

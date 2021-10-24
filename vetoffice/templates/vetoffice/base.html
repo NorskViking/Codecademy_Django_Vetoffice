@@ -4,12 +4,68 @@ This is the base HTML file for the Vetoffice
 This will contain the static HTML code for the website
 subsequent html files will extend from this base file.
 --->
+<!DOCTYPE html>
+{% load static %}
+<!--
+The base-template for the webpage.
+Creates a top-bar with hyperlinks to the homepage, polls and results.
+The top-bar is fixed to the top, and will follow when a user scrolls down
+in the page.
+
+By use of  'blocks' we give the 'child'-pages the possibility to override with
+their own specified content.
+-->
+
+<html>
+<style>
+.navbar {
+  overflow: hidden;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text_align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px;
+}
+
+
+</style>
 <head>
+<link rel="stylesheet" type="text/css" href="{% static 'vetoffice/style.css' %}">
+
+  <div class="navbar">
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'register_owner' %}">Register Owner</a>
+  </div>
 
 </head>
+
 <body>
-	<a href="{% url 'home' %}"><h1>Vet Office</h1></a>
-	<h3>Welcome to the Vet Office {{ name }}!</h3>
-	{% block content %}
-	{% endblock %}
+  <div class="main">
+    <div id="content">
+      {% block content %}
+
+      {% endblock %}
+  </div>
+
 </body>
+
+</html>
