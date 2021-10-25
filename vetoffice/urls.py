@@ -9,6 +9,6 @@ app_name = 'vetoffice'
 urlpatterns = [
     path('', views.home, name='home'),
     path('register/owner', views.register_owner, name='register_owner'),
-    path('owner/', views.owner, name='owner'),
+    path('owner/', views.owner_list, name='owner'),
     path('admin/', admin.site.urls),
 ]

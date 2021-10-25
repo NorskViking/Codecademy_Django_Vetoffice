@@ -1,62 +1,6 @@
 from django.db import models
 #TODO: Create Docstring comments for classes and functions
 
-"""
-Animal_Type_Choices = [
-#Using animal type as a group, followed with iterable 2-tuples of breed for the animal type.
-	('Dog', (
-			('german sheperd', 'German Sheperd'),
-			('pomeranian', 'Pomeranian'),
-			('labrador', 'Labrador'),
-			('husky', 'Husky'),
-			('bulldog', 'Bulldog'),
-			('chihuahua', 'Chihuahua'),
-		)
-	),
-	('Cat', (
-			('norewgian forest cat', 'Norwegian Forest Cat'),
-			('persian', 'Persian'),
-			('sphynx', 'Sphynx'),
-			('siamese', 'Siamese'),
-			('maine coon', 'Maine Coon'),
-		)
-	),
-	('Bird', (
-			('parakeet', 'Parakeet'),
-			('cockatiel', 'Cockatiel'),
-			('canarie', 'Canarie'),
-			('african grey', 'African Grey'),
-			('amazon parrot', 'Amazon Parrot'),
-		)
-	),
-	('Reptile', (
-			('crested gecko', 'Crested Gecko'),
-			('ball python', 'Ball Python'),
-			('bearded dragon', 'Bearded Dragon'),
-			('leopard gecko', 'Leopard Gecko'),
-			('corn snake', 'Corn Snake'),
-		)
-	),
-	('Rabbit', (
-			('mini rex', 'Mini Rex'),
-			('holland lop', 'Holland Lop'),
-			('dutch lop', 'Dutch Lop'),
-			('dwarf hotot', 'Dwarf Hotot'),
-			('mini lop', 'Mini lop'),
-		)
-	),
-	('Fish', (
-			('betta', 'Betta'),
-			('goldfish', 'Goldfish'),
-			('angelfish', 'Angelfish'),
-			('catfish', 'Catfish'),
-			('guppi', 'Guppi'),
-		)
-	),
-	('Unknown', 'unkown'),
-]
-"""
-
 # Create your models here.
 class Owner(models.Model):
 	#The Owner table, with OwnerID as primary key
@@ -72,7 +16,7 @@ class Owner(models.Model):
 	Function: has_multiple_pets
 				reurns boolean True if owner have several pets registered with the Vet Office.
 	"""
-	ownerID = models.BigAutoField(primary_key=True)
+	#id = models.BigAutoField(primary_key=True)
 	first_name = models.CharField(max_length=50)
 	last_name = models.CharField(max_length=50)
 	phone = models.CharField(max_length=30)
@@ -120,7 +64,7 @@ class Patient(models.Model):
 		('Fish', 'fish'),
 		('Unknown', 'unkown'),
 	]
-	patientID = models.CharField(max_length=30, primary_key=True)
+	#patientID = models.BigAutoField(primary_key=True)
 	pet_name = models.CharField(max_length=200)
 	animal_type = models.CharField(max_length=50, choices=Animal_Type_Choices, default='Unkown')
 	age = models.IntegerField(default=0)
@@ -139,5 +83,5 @@ class Appointment(models.Model):
 	"""
 	TODO: Create class docstring
 	"""
-	appointmentID = models.CharField(max_length=30, primary_key=True)
+	appointmentID = models.BigAutoField(primary_key=True)
 	patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
