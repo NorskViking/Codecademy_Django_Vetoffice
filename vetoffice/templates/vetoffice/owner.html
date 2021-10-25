@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+{% extends './base.html' %}
+
+{% block content %}
+{% if owner_list %}
+<ul>
+  {% for owner in owner_list %}
+  <li>
+    Name: {{ owner.last_name }}, {{ owner.first_name }} -- Phone: {{ owner.phone }}
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>
+  There's no owners registered
+  </p>
+{% endif %}
+
+{% endblock %}

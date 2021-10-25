@@ -1,11 +1,13 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+
+{% extends './base.html' %}
 
 {% block content %}
 
 <h1>Register new Owner</h1>
 
-<form action="{% url 'owner_create' %}" method="post">
-  {%csrf_tokem %}
+<form action="{% url 'vetoffice:register_owner' %}" method="post">
+  {% csrf_token %}
 
   {{ form.as_p }}
 

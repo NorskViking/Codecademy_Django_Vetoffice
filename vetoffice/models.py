@@ -72,7 +72,7 @@ class Owner(models.Model):
 	Function: has_multiple_pets
 				reurns boolean True if owner have several pets registered with the Vet Office.
 	"""
-	ownerID = models.CharField(max_length=30, primary_key=True)
+	ownerID = models.BigAutoField(primary_key=True)
 	first_name = models.CharField(max_length=50)
 	last_name = models.CharField(max_length=50)
 	phone = models.CharField(max_length=30)

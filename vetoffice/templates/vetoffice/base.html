@@ -29,7 +29,7 @@ their own specified content.
 .navbar a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: #ed0606;
   text_align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -52,8 +52,9 @@ their own specified content.
 <link rel="stylesheet" type="text/css" href="{% static 'vetoffice/style.css' %}">
 
   <div class="navbar">
-    <a href="{% url 'home' %}">Home</a>
-    <a href="{% url 'register_owner' %}">Register Owner</a>
+    <a href="{% url 'vetoffice:home' %}">Home</a>
+    <a href="{% url 'vetoffice:register_owner' %}">Register Owner</a>
+    <a href="{% url 'vetoffice:owner' %}">Owner</a>
   </div>
 
 </head>
