@@ -1,9 +1,11 @@
 body {
-  background-image: url("images/background.jpg") no-repeat;
+  background-image: url("images/background.jpg");
+  background-repeat: no-repeat;
   background-color: #b5d9f6;
   background-position: center;
   background-size: cover;
-  height: 500px;
+  padding-top: 30px;
+  height: 2000px;
 }
 
 .owners {
@@ -11,7 +13,7 @@ body {
   width: 200px;
 }
 
-.owners.th {
+.owners td {
   color: green;
 }
 
