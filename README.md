@@ -89,3 +89,4 @@ The following are the key topics I hope to learn
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [CSS](https://www.w3schools.com/css/)
 * [Atom](https://atom.io/)
+* [Pexels](https://www.pexels.com/search/cute%20healthy%20yorkshire%20terrier%20with%20nurse/) - For Background picture

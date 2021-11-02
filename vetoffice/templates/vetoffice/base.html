@@ -1,22 +1,13 @@
 <!DOCTYPE html>
+{% load static %}
 <!---
 This is the base HTML file for the Vetoffice
 This will contain the static HTML code for the website
 subsequent html files will extend from this base file.
 --->
-<!DOCTYPE html>
-{% load static %}
-<!--
-The base-template for the webpage.
-Creates a top-bar with hyperlinks to the homepage, polls and results.
-The top-bar is fixed to the top, and will follow when a user scrolls down
-in the page.
-
-By use of  'blocks' we give the 'child'-pages the possibility to override with
-their own specified content.
--->
 
 <html>
+<!--
 <style>
 .navbar {
   overflow: hidden;
@@ -45,9 +36,9 @@ their own specified content.
   margin-top: 30px;
   height: 1500px;
 }
-
-
 </style>
+-->
+
 <head>
 <link rel="stylesheet" type="text/css" href="{% static 'vetoffice/style.css' %}">
 
@@ -61,6 +52,9 @@ their own specified content.
 
 <body>
   <div class="main">
+  <div id=backgriundpic>
+    
+  </div>
     <div id="content">
       {% block content %}
 

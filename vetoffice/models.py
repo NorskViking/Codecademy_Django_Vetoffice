@@ -67,6 +67,7 @@ class Patient(models.Model):
 	#patientID = models.BigAutoField(primary_key=True)
 	pet_name = models.CharField(max_length=200)
 	animal_type = models.CharField(max_length=50, choices=Animal_Type_Choices, default='Unkown')
+	breed = models.CharField(max_length=100, default='Unkown')
 	age = models.IntegerField(default=0)
 	owner = models.ForeignKey(Owner, on_delete=models.CASCADE)
 
