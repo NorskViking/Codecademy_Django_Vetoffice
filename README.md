@@ -62,13 +62,21 @@ The following are the key topics I hope to learn
 
 ## TODO
 - [ ] Models
- - [x] Patient
- - [x] Owner
- - [ ] Appointment
+	- [x] Patient
+	- [x] Owner
+	- [ ] Appointment
 - [ ] Views
- - [ ] Patient
- - [x] Owner
- - [ ] Appointment
+	- [ ] Patient
+	- [x] Owner
+	- [ ] Appointment
+- [ ] Forms
+	- [ ] Patient
+	- [ ] Owner
+	- [ ] Appointment
+- [ ] HTML
+	- [ ] Patient
+	- [x] Owner
+	- [ ] Appointment
 
 ## What is used
 
