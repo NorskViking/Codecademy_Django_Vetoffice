@@ -61,14 +61,14 @@ The following are the key topics I hope to learn
 * Using GIT for version control.
 
 ## TODO
-- [] Models
+- [ ] Models
  - [x] Patient
  - [x] Owner
- - [] Appointment
-- [] Views
- - [] Patient
+ - [ ] Appointment
+- [ ] Views
+ - [ ] Patient
  - [x] Owner
- - [] Appointment
+ - [ ] Appointment
 
 ## What is used
 
