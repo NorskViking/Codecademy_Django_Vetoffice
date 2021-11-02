@@ -13,15 +13,17 @@
     <th> </th>
   </tr>
   <tr>
-  {% for owner in owner_list %}
+    {% for owner in owner_list %}
   </tr>
   <tr>
     <td>{{ patient.pet_name }}</td>
     <td>{{ patient.animal_type }}</td>
-    <th>{{ patient.breed }}</th>
+    <td>{{ patient.breed }}</td>
+    <td>{{ patient.age }}</td>
     <td>{{ patient.owner.last_name }}, {{ patient.owner.first_name }}</td>
     <td><a href="{% url 'vetoffice:patientupdate' patient.id %}"><button>Edit</button></a></td>
     <td><a href="{% url 'vetoffice:patientdelete' patient.id %}"><button>Delete</button></a></td>
-    </tr>
+  </tr>
+  {% endfor %}
 </table>
 {% endblock %}

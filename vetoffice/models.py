@@ -55,7 +55,6 @@ class Patient(models.Model):
 	__str__ for easy coupling pet_name and animal_type:breed of patient.
 	"""
 	Animal_Type_Choices = [
-	#Using animal type as a group, followed with iterable 2-tuples of breed for the animal type.
 		('Dog', 'dog'),
 		('Cat', 'cat'),
 		('Bird', 'bird'),
@@ -64,7 +63,7 @@ class Patient(models.Model):
 		('Fish', 'fish'),
 		('Unknown', 'unkown'),
 	]
-	#patientID = models.BigAutoField(primary_key=True)
+
 	pet_name = models.CharField(max_length=200)
 	animal_type = models.CharField(max_length=50, choices=Animal_Type_Choices, default='Unkown')
 	breed = models.CharField(max_length=100, default='Unkown')
@@ -86,3 +85,7 @@ class Appointment(models.Model):
 	"""
 	appointmentID = models.BigAutoField(primary_key=True)
 	patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
+
+class Breeds(models.Model):
+	animal_type = models.ForeignKey(Patient.animal_type, on_delete=models.CASCADE)
+	breed = models.CharField(max_length=200, default="Unknown")
