@@ -21,6 +21,56 @@ Any and all names and other information used for filling the database and other 
 * Django
 	* Create an RESTfull API for the django-project.
 
+
+## Features
+- [x] Owner Registration, Editing and Deletion to/from database.
+- [ ] Patient Registration, Editing and Deletion to/from database.
+- [ ] Appointment Registration, Editing and Deletion to/from database.
+- [ ] Website navigation
+
+## Potential Features
+ - [ ] User login
+ - [ ] User models for employees with authentication levels
+ - [ ] User models for customers
+ - [ ] Timetable with occupied/available appointments
+ 	- [ ] Additional information visible for employees.
+
+
+## TODO
+- [ ] Models
+	- [x] Patient
+	- [x] Owner
+	- [ ] Appointment
+- [ ] Views
+	- [ ] Patient
+	- [x] Owner
+	- [ ] Appointment
+- [ ] Forms
+	- [ ] Patient
+	- [ ] Owner
+	- [ ] Appointment
+- [ ] HTML
+	- [ ] Patient
+	- [x] Owner
+	- [ ] Appointment
+	- [ ] Base
+	- [ ] Home
+- [ ] Tests
+	- [ ] Patient Model
+	- [ ] Patient Views
+	- [ ] Patient URL
+	- [ ] Owner Model
+	- [ ] Owner Views
+	- [ ] Owner URL
+	- [ ] Appointment Model
+	- [ ] Appointment Views
+	- [ ] Appointment URL
+	- [ ] Error handling
+- [ ] Documentation
+	- [ ] Comprehensive comments
+	- [ ] Docstring documentation
+
+
 ## Key Topics
 
 The following are the key topics I hope to learn
@@ -60,23 +110,6 @@ The following are the key topics I hope to learn
 * Build and style webpages with semantic HTML and CSS.
 * Using GIT for version control.
 
-## TODO
-- [ ] Models
-	- [x] Patient
-	- [x] Owner
-	- [ ] Appointment
-- [ ] Views
-	- [ ] Patient
-	- [x] Owner
-	- [ ] Appointment
-- [ ] Forms
-	- [ ] Patient
-	- [ ] Owner
-	- [ ] Appointment
-- [ ] HTML
-	- [ ] Patient
-	- [x] Owner
-	- [ ] Appointment
 
 ## What is used
 
