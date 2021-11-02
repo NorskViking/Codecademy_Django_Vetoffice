@@ -15,5 +15,4 @@ class OwnerForm(ModelForm):
 class PatientForm(ModelForm):
     class Meta:
         model = Patient
-        fields = ['pet_name', 'animal_type', 'age', 'owner']
-        
+        fields = ['pet_name', 'animal_type', 'breed', 'age', 'owner']

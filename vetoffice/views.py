@@ -1,35 +1,57 @@
 from django.shortcuts import get_object_or_404, render, redirect
 from django.http import HttpResponse
 from django.views.decorators.http import require_POST
+from django.views.generic import ListView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
 
-from vetoffice.forms import OwnerForm
-from vetoffice.models import Owner
+from vetoffice.forms import OwnerForm, PatientForm
+from vetoffice.models import Owner, Patient
 
 # Create your views here.
 def home(request):
     template_name = 'vetoffice/home.html'
     return render(request, 'vetoffice/home.html')
 
-def owner(request):
-    owner_list = Owner.objects.order_by('last_name')
-    #owner = get_object_or_404(Owner)
-    context = {'owner_list' : owner_list}
-    return render(request, 'vetoffice/owner.html', context)
-    #return render(request, 'vetoffice/owner.html')
+class OwnerList(ListView):
+    model = Owner
+    template_name = 'vetoffice/owner_list.html'
 
+class OwnerCreate(CreateView):
+    model = Owner
+    template_name = 'vetoffice/owner_create_form.html'
+    form_class = OwnerForm
+    success_url = reverse_lazy('vetoffice:ownerlist')
 
+class OwnerUpdate(UpdateView):
+    model = Owner
+    template_name = 'vetoffice/owner_update_form.html'
+    form_class = OwnerForm
+    success_url = reverse_lazy('vetoffice:ownerlist')
 
-#@require_POST
-def register_owner(request):
-    #model = Owner
-    #template_name = 'vetoffice/register_owner.html'
-    if request.method == "POST":
-        form = OwnerForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('vetoffice:home')
-    else:
-        form = OwnerForm()
-    return render(request, 'vetoffice/register_owner.html', {'form' : form})
+class OwnerDelete(DeleteView):
+    model = Owner
+    template_name = 'vetoffice/owner_delete_form.html'
+    success_url = reverse_lazy('vetoffice:ownerlist')
 
-    #return HttpResponse("Something went wrong.")
+class PatientList(ListView):
+    model = Patient
+    template_name = 'vetoffice/patient_list.html'
+
+class PatientCreate(CreateView):
+    model = Patient
+    template_name = 'vetoffice/patient_create_form.html'
+    form_class = PatientForm
+    success_url = reverse_lazy('vetoffice:patientlist')
+
+class PatientUpdate(UpdateView):
+    model = Patient
+    template_name = 'vetoffice/patient_update_form.html'
+    form_class = PatientForm
+    success_url = reverse_lazy('vetoffice:patientlist')
+
+class PatientDelete(DeleteView):
+    model = Patient
+    template_name = 'vetoffice/patient_delete_form.html'
+    success_url = reverse_lazy('vetoffice:patientlist')
+    #fields = []
