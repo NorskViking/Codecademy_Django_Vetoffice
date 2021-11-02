@@ -45,21 +45,19 @@ subsequent html files will extend from this base file.
   <div class="navbar">
     <a href="{% url 'vetoffice:home' %}">Home</a>
     <a href="{% url 'vetoffice:ownercreate' %}">Register Owner</a>
-    <a href="{% url 'vetoffice:ownerlist' %}">Owner</a>
+    <a href="{% url 'vetoffice:ownerlist' %}">Owners</a>
   </div>
 
 </head>
 
 <body>
   <div class="main">
-  <div id=backgriundpic>
+
     
-  </div>
-    <div id="content">
       {% block content %}
 
       {% endblock %}
-  </div>
+
 
 </body>
 

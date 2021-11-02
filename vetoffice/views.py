@@ -26,6 +26,7 @@ class OwnerUpdate(UpdateView):
     model = Owner
     template_name = 'vetoffice/owner_update_form.html'
     form_class = OwnerForm
+    success_url = 'vetoffice:owenerlist'
     #fields = ['last_name', 'first_name', 'phone']
 
 class OwnerDelete(DeleteView):

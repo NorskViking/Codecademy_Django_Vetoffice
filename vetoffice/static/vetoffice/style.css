@@ -6,8 +6,13 @@ body {
   height: 500px;
 }
 
-.backgriundpic {
+.owners {
+  table-layout: auto;
+  width: 200px;
+}
 
+.owners.th {
+  color: green;
 }
 
 .navbar {
