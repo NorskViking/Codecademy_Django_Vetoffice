@@ -60,6 +60,16 @@ The following are the key topics I hope to learn
 * Build and style webpages with semantic HTML and CSS.
 * Using GIT for version control.
 
+## TODO
+[] Models
+ [x] Patient
+ [x] Owner
+ [] Appointment
+[] Views
+ [] Patient
+ [x] Owner
+ [] Appointment
+
 ## What is used
 
 * Python 3.8.10
