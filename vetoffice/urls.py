@@ -15,5 +15,9 @@ urlpatterns = [
     path('patient/register/', views.PatientCreate.as_view(), name='patientcreate'),
     path('patient/<pk>/update/', views.PatientUpdate.as_view(), name='patientupdate'),
     path('patient/<pk>/delete/', views.PatientDelete.as_view(), name='patientdelete'),
+    path('breed/list/', views.BreedList.as_view(), name='breedlist'),
+    path('breed/register/', views.BreedCreate.as_view(), name='breedcreate'),
+    path('breed/<pk>/update/', views.BreedUpdate.as_view(), name='breedupdate'),
+    path('breed/<pk>/delete/', views.BreedDelete.as_view(), name='breeddelete'),
     #path('admin/', admin.site.urls),
 ]

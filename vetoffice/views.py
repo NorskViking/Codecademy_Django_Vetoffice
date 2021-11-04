@@ -5,8 +5,8 @@ from django.views.generic import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
-from vetoffice.forms import OwnerForm, PatientForm
-from vetoffice.models import Owner, Patient
+from vetoffice.forms import OwnerForm, PatientForm, BreedForm
+from vetoffice.models import Owner, Patient, Breed
 
 # Create your views here.
 def home(request):
@@ -54,3 +54,24 @@ class PatientDelete(DeleteView):
     model = Patient
     template_name = 'vetoffice/patient_delete_form.html'
     success_url = reverse_lazy('vetoffice:patientlist')
+
+class BreedList(ListView):
+    model = Breed
+    template_name = 'vetoffice/breed_list.html'
+
+class BreedCreate(CreateView):
+    model = Breed
+    template_name = 'vetoffice/breed_create_form.html'
+    form_class = BreedForm
+    success_url = reverse_lazy('vetoffice:breedlist')
+
+class BreedUpdate(UpdateView):
+    model = Breed
+    template_name = 'vetoffice/breed_update_form.html'
+    form_class = BreedForm
+    success_url = reverse_lazy('vetoffice:breedlist')
+
+class BreedDelete(DeleteView):
+    model = Breed
+    template_name = 'vetoffice/breed_delete_form.html'
+    success_url = reverse_lazy('vetoffice:breedlist')

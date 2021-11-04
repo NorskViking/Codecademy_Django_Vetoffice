@@ -36,6 +36,24 @@ class Owner(models.Model):
 		'''
 		return self.patient_set.count() > 1
 
+class Veterinary(models.Model):
+	vet_name = models.CharField(max_length=300)
+
+
+class Breed(models.Model):
+	Animal_Type_Choices = [
+		('Dog', 'Dog'),
+		('Cat', 'Cat'),
+		('Bird', 'Bird'),
+		('Reptile', 'Reptile'),
+		('Rabbit', 'Rabbit'),
+		('Fish', 'Fish'),
+		('Unknown', 'Unkown'),
+	]
+
+	animal = models.CharField(max_length=50, choices=Animal_Type_Choices, default='Unknown')
+	breed = models.CharField(max_length=200, default='Unknown')
+
 class Patient(models.Model):
 	#The Patient table, with patientID as primary key
 	#Owner is foreign key, as the paitent can only have one owner
@@ -67,6 +85,7 @@ class Patient(models.Model):
 	pet_name = models.CharField(max_length=200)
 	animal_type = models.CharField(max_length=50, choices=Animal_Type_Choices, default='Unkown')
 	breed = models.CharField(max_length=200, default='Unkown')
+	#breed = models.ForeignKey(Breed, on_delete=models.CASCADE)
 	age = models.IntegerField(default=0)
 	owner = models.ForeignKey(Owner, on_delete=models.CASCADE)
 
@@ -85,7 +104,3 @@ class Appointment(models.Model):
 	"""
 	appointmentID = models.BigAutoField(primary_key=True)
 	patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
-
-class Breed(models.Model):
-	animal = models.CharField(max_length=50, choices=Patient.Animal_Type_Choices, default='Unknown')
-	breed = models.CharField(max_length=200, default='Unknown')
