@@ -47,31 +47,31 @@ class Patient(models.Model):
 
 	Foreign Key: owner = Owner:ownerID
 
-	Fields: patientID(String), pet_name(string), animal_type(string, 2-tuple:animal type/breed),
+	Fields: patientID(String), pet_name(string), animal_type(string), breed(string,)
 	age(integer), owner(Foreign key, delete all on Owner removed)
 
-	List: Animal_Type_Choices - couples itreable 2-tuples of breed connected to animal_type.
+	List: Animal_Type_Choices.
 
 	__str__ for easy coupling pet_name and animal_type:breed of patient.
 	"""
 	Animal_Type_Choices = [
-		('Dog', 'dog'),
-		('Cat', 'cat'),
-		('Bird', 'bird'),
-		('Reptile', 'reptile'),
-		('Rabbit', 'rabbit'),
-		('Fish', 'fish'),
-		('Unknown', 'unkown'),
+		('DOG', 'Dog'),
+		('CAT', 'Cat'),
+		('BIRD', 'Bird'),
+		('REPTILE', 'Reptile'),
+		('RABBIT', 'Rabbit'),
+		('FISH', 'Fish'),
+		('UNKOWN', 'unkown'),
 	]
 
 	pet_name = models.CharField(max_length=200)
 	animal_type = models.CharField(max_length=50, choices=Animal_Type_Choices, default='Unkown')
-	breed = models.CharField(max_length=100, default='Unkown')
+	breed = models.CharField(max_length=200, default='Unkown')
 	age = models.IntegerField(default=0)
 	owner = models.ForeignKey(Owner, on_delete=models.CASCADE)
 
 	def __str__(self):
-		#Returns pet name and breed
+		#Returns pet name and animal_type
 		return self.pet_name + ", " + self.animal_type
 
 	class Meta:
@@ -86,6 +86,6 @@ class Appointment(models.Model):
 	appointmentID = models.BigAutoField(primary_key=True)
 	patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
 
-class Breeds(models.Model):
-	animal_type = models.ForeignKey(Patient.animal_type, on_delete=models.CASCADE)
-	breed = models.CharField(max_length=200, default="Unknown")
+class Breed(models.Model):
+	animal = models.CharField(max_length=50, choices=Patient.Animal_Type_Choices, default='Unknown')
+	breed = models.CharField(max_length=200, default='Unknown')

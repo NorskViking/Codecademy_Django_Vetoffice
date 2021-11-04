@@ -54,4 +54,3 @@ class PatientDelete(DeleteView):
     model = Patient
     template_name = 'vetoffice/patient_delete_form.html'
     success_url = reverse_lazy('vetoffice:patientlist')
-    #fields = []

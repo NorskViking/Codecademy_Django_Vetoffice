@@ -9,11 +9,11 @@ def create_owner(first_name, last_name, phone):
     """
     return Owner.objects.create(first_name, last_name, phone)
 
-def create_patient(patientID, pet_name, animal_type, breed, age, owner):
+def create_patient(pet_name, animal_type, breed, age, owner):
     """
     Create an Paitient instance with given patientID, pet_name, age and Owner as ForeignKey
     """
-    return Patient.objects.create(patientID, pet_name, breed, age, owner)
+    return Patient.objects.create(pet_name, animal_type, breed, age, owner)
 
 def create_appointment(appointmentID, patient):
     """
