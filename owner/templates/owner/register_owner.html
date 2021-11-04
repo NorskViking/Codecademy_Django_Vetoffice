@@ -6,7 +6,7 @@
 
 <h1>Register new Owner</h1>
 
-<form action="{% url 'vetoffice:register_owner' %}" method="post">
+<form action="{% url 'owner:register_owner' %}" method="post">
   {% csrf_token %}
 
   {{ form.as_p }}
