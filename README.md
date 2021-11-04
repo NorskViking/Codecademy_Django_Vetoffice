@@ -24,7 +24,7 @@ Any and all names and other information used for filling the database and other 
 
 ## Features
 - [x] Owner Registration, Editing and Deletion to/from database.
-- [ ] Patient Registration, Editing and Deletion to/from database.
+- [x] Patient Registration, Editing and Deletion to/from database.
 - [ ] Appointment Registration, Editing and Deletion to/from database.
 - [ ] Website navigation
 
@@ -34,6 +34,7 @@ Any and all names and other information used for filling the database and other 
  - [ ] User models for customers
  - [ ] Timetable with occupied/available appointments
  	- [ ] Additional information visible for employees.
+ - [ ] Choose breed from expandable list, based on animal type list.
 
 
 ## TODO
@@ -42,7 +43,7 @@ Any and all names and other information used for filling the database and other 
 	- [x] Owner
 	- [ ] Appointment
 - [ ] Views
-	- [ ] Patient
+	- [x] Patient
 	- [x] Owner
 	- [ ] Appointment
 - [ ] Forms
@@ -50,7 +51,7 @@ Any and all names and other information used for filling the database and other 
 	- [ ] Owner
 	- [ ] Appointment
 - [ ] HTML
-	- [ ] Patient
+	- [x] Patient
 	- [x] Owner
 	- [ ] Appointment
 	- [ ] Base

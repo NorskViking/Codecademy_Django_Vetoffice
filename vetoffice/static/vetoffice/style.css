@@ -8,11 +8,20 @@ body {
   height: 2000px;
 }
 
-.owners {
+.owners table {
+  width: 1500px;
+  height: 70px;
   table-layout: auto;
-  width: 200px;
+  background-color: red;
 }
 
+.owners tr, th, td {
+  text-align: left;
+  heigth: 70px;
+  width: 150px;
+  border-bottom: 2px solid blue;
+  text-decoration-color: #ddd;
+}
 
 .navbar {
   overflow: hidden;

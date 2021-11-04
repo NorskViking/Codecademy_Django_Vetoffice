@@ -55,13 +55,13 @@ class Patient(models.Model):
 	__str__ for easy coupling pet_name and animal_type:breed of patient.
 	"""
 	Animal_Type_Choices = [
-		('DOG', 'Dog'),
-		('CAT', 'Cat'),
-		('BIRD', 'Bird'),
-		('REPTILE', 'Reptile'),
-		('RABBIT', 'Rabbit'),
-		('FISH', 'Fish'),
-		('UNKOWN', 'unkown'),
+		('Dog', 'Dog'),
+		('Cat', 'Cat'),
+		('Bird', 'Bird'),
+		('Reptile', 'Reptile'),
+		('Rabbit', 'Rabbit'),
+		('Fish', 'Fish'),
+		('Unknown', 'Unkown'),
 	]
 
 	pet_name = models.CharField(max_length=200)
@@ -75,7 +75,7 @@ class Patient(models.Model):
 		return self.pet_name + ", " + self.animal_type
 
 	class Meta:
-		ordering = ["pet_name"]
+		ordering = ["owner"]
 
 class Appointment(models.Model):
 	#The Appointment table, with AppointmentID as primary key
