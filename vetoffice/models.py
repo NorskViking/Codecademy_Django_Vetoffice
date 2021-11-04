@@ -10,5 +10,7 @@ class Appointment(models.Model):
 	TODO: Create class docstring
 	"""
 	appointmentID = models.BigAutoField(primary_key=True)
-	patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
+	patientID = models.ForeignKey(Patient, on_delete=models.CASCADE)
 	employeeID = models.ForeignKey(Employee, on_delete=models.CASCADE)
+	#date = models.DateField()
+	#information = models.CharField(max_length=1000, requiered=False, default='')
