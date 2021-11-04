@@ -8,21 +8,21 @@ from .forms import OwnerForm
 # Create your views here.
 class OwnerList(ListView):
     model = Owner
-    template_name = 'vetoffice/owner_list.html'
+    template_name = 'owner_list.html'
 
 class OwnerCreate(CreateView):
     model = Owner
-    template_name = 'vetoffice/owner_create_form.html'
+    template_name = 'owner_create_form.html'
     form_class = OwnerForm
-    success_url = reverse_lazy('vetoffice:ownerlist')
+    success_url = reverse_lazy('owner:ownerlist')
 
 class OwnerUpdate(UpdateView):
     model = Owner
-    template_name = 'vetoffice/owner_update_form.html'
+    template_name = 'owner_update_form.html'
     form_class = OwnerForm
-    success_url = reverse_lazy('vetoffice:ownerlist')
+    success_url = reverse_lazy('owner:ownerlist')
 
 class OwnerDelete(DeleteView):
     model = Owner
-    template_name = 'vetoffice/owner_delete_form.html'
-    success_url = reverse_lazy('vetoffice:ownerlist')
+    template_name = 'owner_delete_form.html'
+    success_url = reverse_lazy('owner:ownerlist')

@@ -20,6 +20,9 @@ from django.http import HttpResponse
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('vetoffice.urls')),
+    path('owner/', include('owner.urls')),
+    path('patient/', include('patient.urls')),
+    path('employee/', include('employee.urls'))
     #path('home/', include('vetoffice.urls')),
     #path('', lambda request: HttpResponse('The website is currently under construction')),
 ]

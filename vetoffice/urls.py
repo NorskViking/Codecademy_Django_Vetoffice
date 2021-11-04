@@ -1,6 +1,6 @@
 from django.urls import path
 #from django.contrib import admin
-
+from . import views
 from owner import views
 from patient import views
 from employee import views
