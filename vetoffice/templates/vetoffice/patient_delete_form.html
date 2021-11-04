@@ -8,6 +8,7 @@
       Are you certain you want to remove "{{ object.pet_name }}", belonging to "{{ object.owner.last_name }}, {{ object.owner.first_name }}"?
     </p>
     <input type="submit" value="Confirm" />
+    <button onclick="window.history.back();" class="btn btn-default" type="button">Cancel</button>
   </div>
 </form>
 {% endblock %}

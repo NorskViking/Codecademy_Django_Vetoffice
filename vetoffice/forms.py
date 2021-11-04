@@ -7,7 +7,7 @@ class OwnerForm(ModelForm):
         model = Owner
         fields = ['first_name', 'last_name', 'phone']
         labels = {
-            'first_name' : 'First Name:',
+            'first_name' : 'First name:',
             'last_name' : 'Family name:',
             'phone' : 'Phone'
         }
