@@ -15,7 +15,8 @@ class Employee(models.Model):
         ('MRS.', 'Mrs.'),
         ('DR.', 'Dr.'),
     ]
-    employeeID = models.BigAutoField(max_length=10, primary_key=True)
+    title = models.CharField(max_length=5, choices=TITLE_CHOICE, default='Dr.')
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
-    title = models.CharField(max_length=5, choices=TITLE_CHOICE, default='Dr.')
+    phone = models.CharField(max_length=20)
+    #available = boolean

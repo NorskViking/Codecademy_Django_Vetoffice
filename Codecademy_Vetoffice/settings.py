@@ -37,10 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'vetoffice.apps.VetofficeConfig',
     'employee',
     'owner',
-    'patient'
+    'patient',
+    'vetoffice.apps.VetofficeConfig',
+
 ]
 
 MIDDLEWARE = [

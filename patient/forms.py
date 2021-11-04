@@ -2,9 +2,9 @@ from django.forms import ModelForm, TextInput
 
 from patient.models import Animal, Breed, Patient
 
-class AnimalTypeForm(ModelForm):
+class AnimalForm(ModelForm):
     class Meta:
-        model = AnimalType
+        model = Animal
         fields = ['animal_type']
 
 class BreedForm(ModelForm):

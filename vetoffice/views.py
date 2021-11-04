@@ -7,5 +7,5 @@ from django.urls import reverse_lazy
 
 # Create your views here.
 def home(request):
-    template_name = 'vetoffice/home.html'
-    return render(request, 'vetoffice/home.html')
+    template_name = 'templates/home.html'
+    return render(request, 'templates/home.html')

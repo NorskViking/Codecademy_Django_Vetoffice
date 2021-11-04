@@ -1,6 +1,8 @@
 from django.urls import path
 from . import views
 
+app_name = 'owner'
+
 urlpatterns = [
     #path('', views.home, name='home'),
     path('owner/list/', views.OwnerList.as_view(), name='ownerlist'),
