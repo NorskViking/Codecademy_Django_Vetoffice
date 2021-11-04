@@ -1,9 +1,11 @@
 from django.urls import path
 #from django.contrib import admin
-from vetoffice import views
+from . import views
+
+from .views import home
 
 app_name = 'vetoffice'
 
 urlpatterns = [
-    path('', views.home, name='home'),
+    path('', views.home.as_view(), name='home'),
 ]

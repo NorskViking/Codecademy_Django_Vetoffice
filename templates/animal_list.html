@@ -1,0 +1,21 @@
+{% extends './base.html' %}
+{% block content %}
+<h2>Animal List</h2>
+<a href="{% url 'patient:animalcreate' %}"><button class"btn">Add Animal type</button></a>
+<table id="animals">
+  <tr>
+    <th>Animal Type</th>
+    <th> </th>
+    <th> </th>
+  </tr>
+  <tr>
+    {% for animal in animal_list %}
+  </tr>
+  <tr>
+    <td>{{ animal.animal_type }}</td>
+    <td><a href="{% url 'patient:animalupdate' animal.id %}"><button>Edit</button></a></td>
+    <td><a href="{% url 'patient:animaldelete' animal.id %}"><button>Delete</button></a></td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

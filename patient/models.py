@@ -5,9 +5,21 @@ from owner.models import Owner
 class Animal(models.Model):
     animal_type = models.CharField(max_length=200, default='Unkown')
 
+    def __str__(self):
+        return self.animal_type
+
+    class Meta:
+        ordering = ['animal_type']
+
 class Breed(models.Model):
     animal = models.ForeignKey(Animal, on_delete=models.CASCADE)
     breed = models.CharField(max_length=200, default='Unknown')
+
+    def __str__(self):
+        return self.breed
+
+    class Meta:
+        ordering = ['animal']
 
 class Patient(models.Model):
 	#The Patient table, with patientID as primary key

@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.http import HttpResponse
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,6 +22,4 @@ urlpatterns = [
     path('owner/', include('owner.urls')),
     path('patient/', include('patient.urls')),
     path('employee/', include('employee.urls'))
-    #path('home/', include('vetoffice.urls')),
-    #path('', lambda request: HttpResponse('The website is currently under construction')),
 ]

@@ -1,10 +1,8 @@
 {% extends './base.html' %}
 {% block content %}
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'vetoffice/style.css' %}">
 
 <h2>Owner List</h2>
-<a href="{% url 'vetoffice:ownercreate' %}"><button class"btn">Add Owner</button></a>
+<a href="{% url 'owner:ownercreate' %}"><button class"btn">Add Owner</button></a>
 <table class="owners">
   <tr>
     <th>Name</th>
@@ -18,8 +16,8 @@
   <tr>
     <td><strong>{{ owner.last_name }}</strong>, {{ owner.first_name }}</td>
     <td>{{ owner.phone }}</td>
-    <td><a href="{% url 'vetoffice:ownerupdate' owner.id %}"><button>Edit</button></a></td>
-    <td><a href="{% url 'vetoffice:ownerdelete' owner.id %}"><button>Delete</button></a></td>
+    <td><a href="{% url 'owner:ownerupdate' owner.id %}"><button>Edit</button></a></td>
+    <td><a href="{% url 'owner:ownerdelete' owner.id %}"><button>Delete</button></a></td>
     </tr>
   {% endfor %}
 </table>

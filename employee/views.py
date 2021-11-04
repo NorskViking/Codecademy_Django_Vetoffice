@@ -8,21 +8,21 @@ from employee.forms import EmployeeForm
 # Create your views here.
 class EmployeeList(ListView):
     model = Employee
-    template_name = 'employee/employee_list.html'
+    template_name = 'employee_list.html'
 
 class EmployeeCreate(CreateView):
     model = Employee
-    template_name = 'employee/employee_create_form.html'
+    template_name = 'employee_create_form.html'
     form_class = EmployeeForm
     success_url = reverse_lazy('employee:employeelist')
 
 class EmployeeUpdate(UpdateView):
     model = Employee
-    template_name = 'employee/employee_update_form.html'
+    template_name = 'employee_update_form.html'
     form_class = EmployeeForm
     success_url = reverse_lazy('employee:employeelist')
 
 class EmployeeDelete(DeleteView):
     model = Employee
-    template_name = 'employee/employee_delete_form.html'
+    template_name = 'employee_delete_form.html'
     success_url = reverse_lazy('employee:employeelist')
