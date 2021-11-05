@@ -17,6 +17,14 @@ class Breed(models.Model):
 
     def __str__(self):
         return self.breed
+    def __Str__(self):
+        return self.animal
+
+    def limit_breed_choices(animal):
+        breed_in_animal = []
+        for breed in self.animal:
+            breed_in_animal.append(breed)
+        return breed_in_animal
 
     class Meta:
         ordering = ['animal']
@@ -41,8 +49,8 @@ class Patient(models.Model):
 	"""
 	pet_name = models.CharField(max_length=200)
 	animal_type = models.ForeignKey(Animal, on_delete=models.CASCADE)
-	breed = models.ForeignKey(Breed, on_delete=models.CASCADE)
-	age = models.IntegerField(default=0)
+    breed = models.ForeignKey(Breed, limit_choices_to=limit_breed_choices, on_delete=models.CASCADE)
+    age = models.IntegerField(default=0)
 	owner = models.ForeignKey(Owner, on_delete=models.CASCADE)
 
 	def __str__(self):
@@ -51,3 +59,6 @@ class Patient(models.Model):
 
 	class Meta:
 		ordering = ["owner"]
+
+    #breed = models.ForeignKey(Breed, limit_choices_to={Breed.animal == 'animal_type'}, on_delete=models.CASCADE)
+    #breed = models.ForeignKey(Breed, limit_choices_to={Breed.animal == 'animal_type'}, on_delete=models.CASCADE)
