@@ -1,7 +1,15 @@
 {% extends './base.html' %}
+<!--
+  Creates a list of the different employees in the different categories of animals treated at the vetoffice.
+  Uses the 'Employee Meta' class to sort based on the animal type.
+
+  Button(Add Employee): Links to the employee_create_form.html, makes it possible to add new employees to the List.
+  Button(Edit): Links to the employee_edit_form.html, makes it possible to edit the employees in the List.
+  Button(Delete): Links to the employee_delete_form.html, makes it poosible to remove a employee from the List.
+-->
 {% block content %}
 <h2>employee List</h2>
-<a href="{% url 'employee:employeecreate' %}"><button class"btn">Add employee</button></a>
+<a href="{% url 'employee:employeecreate' %}"><button class"btn">Add Employee</button></a>
 <table id="employees">
   <tr>
     <th>Title</th>

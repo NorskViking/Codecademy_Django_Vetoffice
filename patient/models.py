@@ -30,35 +30,36 @@ class Breed(models.Model):
         ordering = ['animal']
 
 class Patient(models.Model):
-	#The Patient table, with patientID as primary key
-	#Owner is foreign key, as the paitent can only have one owner
-	"""Create the patient SQLite Table.
+    #The Patient table, with patientID as primary key
+    #Owner is foreign key, as the paitent can only have one owner
+    """Create the patient SQLite Table.
 
-	Stores a 'Patient' related to a Owner and one or more Appointments.
+    Primary Key: Used as Foreign Key for Appointment
 
-	Primary Key: patientID, used as Foreign Key for Appointment
+    Foreign Key: owner = Owner:ownerID
 
-	Foreign Key: owner = Owner:ownerID
+    Fields: pet_name(string), animal_type(ForeignKey), breed(ForeignKey)
+    age(integer), owner(Foreign key, delete all on Owner removed)
 
-	Fields: patientID(String), pet_name(string), animal_type(string), breed(string,)
-	age(integer), owner(Foreign key, delete all on Owner removed)
-
-	List: Animal_Type_Choices.
-
-	__str__ for easy coupling pet_name and animal_type:breed of patient.
-	"""
-	pet_name = models.CharField(max_length=200)
-	animal_type = models.ForeignKey(Animal, on_delete=models.CASCADE)
-    breed = models.ForeignKey(Breed, limit_choices_to=limit_breed_choices, on_delete=models.CASCADE)
+    __str__ for coupling pet_name and animal_type:breed of patient.
+    """
+    pet_name = models.CharField(max_length=200)
+    animal_type = models.ForeignKey(Animal, on_delete=models.CASCADE)
+    breed = models.ForeignKey(Breed, on_delete=models.CASCADE)
     age = models.IntegerField(default=0)
-	owner = models.ForeignKey(Owner, on_delete=models.CASCADE)
+    owner = models.ForeignKey(Owner, on_delete=models.CASCADE)
 
-	def __str__(self):
-		#Returns pet name and animal_type
-		return self.pet_name + ", " + self.animal_type
+    def __str__(self):
+            #Returns pet name and animal_type
+            return self.pet_name + ", " + self.animal_type
 
-	class Meta:
-		ordering = ["owner"]
+    class Meta:
+        ordering = ["owner"]
 
     #breed = models.ForeignKey(Breed, limit_choices_to={Breed.animal == 'animal_type'}, on_delete=models.CASCADE)
     #breed = models.ForeignKey(Breed, limit_choices_to={Breed.animal == 'animal_type'}, on_delete=models.CASCADE)
+    #pet_name = models.CharField(max_length=200)
+	#animal_type = models.ForeignKey(Animal, on_delete=models.CASCADE)
+    #breed = models.ForeignKey(Breed, on_delete=models.CASCADE)
+    #ge = models.IntegerField(default=0)
+	#owner = models.ForeignKey(Owner, on_delete=models.CASCADE)

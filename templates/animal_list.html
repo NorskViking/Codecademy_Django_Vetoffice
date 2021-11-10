@@ -1,4 +1,12 @@
 {% extends './base.html' %}
+<!--
+  Creates a list of the different animals in the different categories of animals treated at the vetoffice.
+  Uses the 'Animal Meta' class to sort based on the animal type.
+
+  Button(Add Animal): Links to the animal_create_form.html, makes it possible to add new animals to the List.
+  Button(Edit): Links to the animal_edit_form.html, makes it possible to edit the animals in the List.
+  Button(Delete): Links to the animal_delete_form.html, makes it poosible to remove a animal from the List.
+-->
 {% block content %}
 <h2>Animal List</h2>
 <a href="{% url 'patient:animalcreate' %}"><button class"btn">Add Animal type</button></a>

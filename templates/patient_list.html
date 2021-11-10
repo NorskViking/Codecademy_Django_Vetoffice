@@ -1,4 +1,12 @@
 {% extends './base.html' %}
+<!--
+  Creates a list of the different patients in the different categories of animals treated at the vetoffice.
+  Uses the 'Patient Meta' class to sort based on the animal type.
+
+  Button(Add Patient): Links to the patient_create_form.html, makes it possible to add new patients to the List.
+  Button(Edit): Links to the patient_edit_form.html, makes it possible to edit the patients in the List.
+  Button(Delete): Links to the patient_delete_form.html, makes it poosible to remove a patient from the List.
+-->
 {% block content %}
 <h2>Patient List</h2>
 <a href="{% url 'patient:patientcreate' %}"><button class"btn">Add Patient</button></a>
@@ -6,7 +14,7 @@
   <tr>
     <th>Name</th>
     <th>Animal Type</th>
-    <th>Breed</th>
+    <th>Patient</th>
     <th>Age</th>
     <th>Owner</th>
     <th> </th>
@@ -18,7 +26,7 @@
   <tr>
     <td><strong>{{ patient.pet_name }}</strong></td>
     <td>{{ patient.animal_type }}</td>
-    <td>{{ patient.breed }}</td>
+    <td>{{ patient.patient }}</td>
     <td>{{ patient.age }}</td>
     <td>{{ patient.owner.last_name }}, {{ patient.owner.first_name }}</td>
     <td><a href="{% url 'patient:patientupdate' patient.id %}"><button>Edit</button></a></td>

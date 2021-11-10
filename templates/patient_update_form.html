@@ -1,4 +1,9 @@
 {% extends './base.html' %}
+<!--
+  Uses the Django form functionality to create a simple HTML/CSS form.
+
+  Using window.history.back() function to go back to the previous window, without editing the data.
+-->
 {% block content %}
 <h2>Update Patient</h2>
 <form method="post">
@@ -6,6 +11,7 @@
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Update" />
+    <button onclick="window.history.back();" class="btn btn-default" type="button">Cancel</button>
   </div>
 </form>
 {% endblock %}

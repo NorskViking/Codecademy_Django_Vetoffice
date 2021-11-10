@@ -1,7 +1,15 @@
 {% extends './base.html' %}
+<!--
+  Creates a list of the different breeds in the different categories of animals treated at the vetoffice.
+  Uses the 'Breed Meta' class to sort based on the animal type.
+
+  Button(Add Breed): Links to the breed_create_form.html, makes it possible to add new breeds to the List.
+  Button(Edit): Links to the breed_edit_form.html, makes it possible to edit the breeds in the List.
+  Button(Delete): Links to the breed_delete_form.html, makes it poosible to remove a breed from the List.
+-->
 {% block content %}
 <h2>Breed List</h2>
-<a href="{% url 'vetoffice:breedcreate' %}"><button class"btn">Add Breed</button></a>
+<a href="{% url 'patient:breedcreate' %}"><button class"btn">Add Breed</button></a>
 <table id="breeds">
   <tr>
     <th>Animal Type</th>
@@ -15,8 +23,8 @@
   <tr>
     <td>{{ breed.animal }}</td>
     <td>{{ breed.breed }}</td>
-    <td><a href="{% url 'vetoffice:breedupdate' breed.id %}"><button>Edit</button></a></td>
-    <td><a href="{% url 'vetoffice:breeddelete' breed.id %}"><button>Delete</button></a></td>
+    <td><a href="{% url 'patient:breedupdate' breed.id %}"><button>Edit</button></a></td>
+    <td><a href="{% url 'patient:breeddelete' breed.id %}"><button>Delete</button></a></td>
   </tr>
   {% endfor %}
 </table>
