@@ -1,5 +1,5 @@
 """
-ASGI config for Codecademy_Vetoffice project.
+ASGI config for Django_Vetoffice project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Codecademy_Vetoffice.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Django_Vetoffice.settings')
 
 application = get_asgi_application()
