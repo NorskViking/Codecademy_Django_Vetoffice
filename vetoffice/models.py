@@ -1,5 +1,9 @@
 from django.db import models
 #TODO: Create Docstring comments for classes and functions
+<<<<<<< HEAD
+from patient.models import Patient
+from employee.models import Employee
+=======
 
 # Create your models here.
 class Owner(models.Model):
@@ -95,6 +99,7 @@ class Patient(models.Model):
 
 	class Meta:
 		ordering = ["owner"]
+>>>>>>> master
 
 class Appointment(models.Model):
 	#The Appointment table, with AppointmentID as primary key
@@ -103,4 +108,11 @@ class Appointment(models.Model):
 	TODO: Create class docstring
 	"""
 	appointmentID = models.BigAutoField(primary_key=True)
+<<<<<<< HEAD
+	patientID = models.ForeignKey(Patient, on_delete=models.CASCADE)
+	employeeID = models.ForeignKey(Employee, on_delete=models.CASCADE)
+	#date = models.DateField()
+	#information = models.CharField(max_length=1000, requiered=False, default='')
+=======
 	patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
+>>>>>>> master

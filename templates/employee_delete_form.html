@@ -1,0 +1,14 @@
+{% extends './base.html' %}
+{% block content %}
+<h2>Delete Employee</h2>
+<form method="post">
+  <div>
+    {% csrf_token %}
+    <p>
+      Are you certain you want to remove "{{ object.last_name }}, {{ object.first_name }}"?
+    </p>
+    <input type="submit" value="Confirm" />
+    <button onclick="window.history.back();" class="btn btn-default" type="button">Cancel</button>
+  </div>
+</form>
+{% endblock %}

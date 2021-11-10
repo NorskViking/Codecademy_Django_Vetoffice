@@ -1,11 +1,15 @@
 from django.urls import path
 #from django.contrib import admin
-
 from . import views
+
+from .views import home
 
 app_name = 'vetoffice'
 
 urlpatterns = [
+<<<<<<< HEAD
+    path('', views.home.as_view(), name='home'),
+=======
     path('', views.home, name='home'),
     path('owner/list/', views.OwnerList.as_view(), name='ownerlist'),
     path('owner/register/', views.OwnerCreate.as_view(), name='ownercreate'),
@@ -20,4 +24,5 @@ urlpatterns = [
     path('breed/<pk>/update/', views.BreedUpdate.as_view(), name='breedupdate'),
     path('breed/<pk>/delete/', views.BreedDelete.as_view(), name='breeddelete'),
     #path('admin/', admin.site.urls),
+>>>>>>> master
 ]

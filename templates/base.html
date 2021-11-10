@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang='en'>
 <!---
@@ -5,16 +6,23 @@ This is the base HTML file for the Vetoffice
 This will contain the static HTML code for the website
 subsequent html files will extend from this base file.
 --->
-{% load static %}
 
 <head>
-<link rel="stylesheet" type="text/css" href="{% static 'vetoffice/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 
   <div class="navbar">
     <a href="{% url 'vetoffice:home' %}">Home</a>
+<<<<<<< HEAD:templates/base.html
+    <a href="{% url 'owner:ownerlist' %}">Owners</a>
+    <a href="{% url 'patient:patientlist' %}">Patients</a>
+    <a href="{% url 'patient:animallist' %}">Animals</a>
+    <a href="{% url 'patient:breedlist' %}">Breeds</a>
+    <a href="{% url 'employee:employeelist' %}">Employees</a>
+=======
     <a href="{% url 'vetoffice:ownerlist' %}">Owners</a>
     <a href="{% url 'vetoffice:patientlist' %}">Patients</a>
     <a href="{% url 'vetoffice:breedlist' %}">Breeds</a>
+>>>>>>> master:vetoffice/templates/vetoffice/base.html
   </div>
 
 </head>
