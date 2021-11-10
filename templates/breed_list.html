@@ -1,7 +1,7 @@
 {% extends './base.html' %}
 {% block content %}
 <h2>Breed List</h2>
-<a href="{% url 'patient:breedcreate' %}"><button class"btn">Add Breed</button></a>
+<a href="{% url 'vetoffice:breedcreate' %}"><button class"btn">Add Breed</button></a>
 <table id="breeds">
   <tr>
     <th>Animal Type</th>
@@ -15,8 +15,8 @@
   <tr>
     <td>{{ breed.animal }}</td>
     <td>{{ breed.breed }}</td>
-    <td><a href="{% url 'patient:breedupdate' breed.id %}"><button>Edit</button></a></td>
-    <td><a href="{% url 'patient:breeddelete' breed.id %}"><button>Delete</button></a></td>
+    <td><a href="{% url 'vetoffice:breedupdate' breed.id %}"><button>Edit</button></a></td>
+    <td><a href="{% url 'vetoffice:breeddelete' breed.id %}"><button>Delete</button></a></td>
   </tr>
   {% endfor %}
 </table>

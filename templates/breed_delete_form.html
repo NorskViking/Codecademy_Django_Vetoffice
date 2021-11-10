@@ -5,7 +5,7 @@
   <div>
     {% csrf_token %}
     <p>
-      Are you certain you want to remove <strong>{{ object.breed }}</strong> from the database?
+      Are you certain you want to remove <strong>"{{ object.breed }}"</strong> from the list?
     </p>
     <input type="submit" value="Confirm" />
     <button onclick="window.history.back();" class="btn btn-default" type="button">Cancel</button>
