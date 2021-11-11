@@ -33,20 +33,22 @@ class Patient(models.Model):
 
     Foreign Key: owner = Owner:ownerID
 
-    Fields: pet_name(string), animal_type(ForeignKey), breed(ForeignKey)
+    Fields: pet_name(string), animal(ForeignKey), breed(ForeignKey)
     age(integer), owner(Foreign key, delete all on Owner removed)
 
     __str__ for coupling pet_name and animal_type:breed of patient.
     """
     pet_name = models.CharField(max_length=200)
-    animal_type = models.ForeignKey(Animal, on_delete=models.CASCADE)
-    breed = models.ForeignKey(Breed, related_name='animal_t', on_delete=models.CASCADE)
+    animal = models.ForeignKey(Animal, on_delete=models.CASCADE)
+    breed = models.ForeignKey(Breed, on_delete=models.CASCADE)
     age = models.IntegerField(default=0)
     owner = models.ForeignKey(Owner, on_delete=models.CASCADE)
 
     def __str__(self):
-            #Returns pet name and animal_type
-            return self.pet_name + ", " + self.animal_type
+        #Returns pet name and animal_type
+        return "%s %s" % (self.pet_name, self.animal)
+    def __str__(self):
+        return self.breed
 
     class Meta:
         ordering = ["owner"]

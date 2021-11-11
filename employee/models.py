@@ -15,8 +15,12 @@ class Employee(models.Model):
         ('MRS.', 'Mrs.'),
         ('DR.', 'Dr.'),
     ]
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
     title = models.CharField(max_length=5, choices=TITLE_CHOICE, default='Dr.')
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    phone = models.CharField(max_length=20)
+    phone = models.CharField(max_length=10)
+    email = models.CharField(max_length=200, default="last_name@vetoffice.com")
     #available = boolean
+
+    def __str__(self):
+        return "%s %s" % (self.title, self.last_name)

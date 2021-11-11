@@ -14,7 +14,7 @@
   <tr>
     <th>Name</th>
     <th>Animal Type</th>
-    <th>Patient</th>
+    <th>Breed</th>
     <th>Age</th>
     <th>Owner</th>
     <th> </th>
@@ -25,8 +25,8 @@
   </tr>
   <tr>
     <td><strong>{{ patient.pet_name }}</strong></td>
-    <td>{{ patient.animal_type }}</td>
-    <td>{{ patient.patient }}</td>
+    <td>{{ patient.animal }}</td>
+    <td>{{ patient.breed }}</td>
     <td>{{ patient.age }}</td>
     <td>{{ patient.owner.last_name }}, {{ patient.owner.first_name }}</td>
     <td><a href="{% url 'patient:patientupdate' patient.id %}"><button>Edit</button></a></td>
@@ -35,3 +35,4 @@
   {% endfor %}
 </table>
 {% endblock %}
+animal

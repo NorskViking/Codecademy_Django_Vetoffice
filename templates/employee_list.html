@@ -14,6 +14,8 @@
   <tr>
     <th>Title</th>
     <th>Last name</th>
+    <th>Phone</th>
+    <th>Email</th>
     <th> </th>
     <th> </th>
   </tr>
@@ -23,6 +25,8 @@
   <tr>
     <td>{{ employee.title }}</td>
     <td>{{ employee.last_name }}</td>
+    <td>{{ employee.phone }}</td>
+    <td>{{ employee.email }}</td>
     <td><a href="{% url 'employee:employeeupdate' employee.id %}"><button>Edit</button></a></td>
     <td><a href="{% url 'employee:employeedelete' employee.id %}"><button>Delete</button></a></td>
   </tr>
