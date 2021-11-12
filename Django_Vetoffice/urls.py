@@ -21,5 +21,5 @@ urlpatterns = [
     path('', include('vetoffice.urls')),
     path('owner/', include('owner.urls')),
     path('patient/', include('patient.urls')),
-    path('employee/', include('employee.urls'))
+    path('employee/', include('employee.urls')),
 ]

@@ -1,19 +1,21 @@
 {% extends './base.html' %}
 <!--
   Creates a list of the different appointments in the different categories of animals treated at the vetoffice.
-  Uses the 'Owner Meta' class to sort based on the animal type.
+  Uses the 'Appointment Meta' class to sort based on the animal type.
 
-  Button(Add Owner): Links to the appointment_create_form.html, makes it possible to add new appointments to the List.
+  Button(Add Appointment): Links to the appointment_create_form.html, makes it possible to add new appointments to the List.
   Button(Edit): Links to the appointment_edit_form.html, makes it possible to edit the appointments in the List.
   Button(Delete): Links to the appointment_delete_form.html, makes it poosible to remove a appointment from the List.
 -->
 {% block content %}
-<h2>Owner List</h2>
-<a href="{% url 'vetoffice:appointmentcreate' %}"><button class"btn">Add Owner</button></a>
+<h2>Appointment List</h2>
+<a href="{% url 'vetoffice:appointmentcreate' %}"><button class"btn">Add Appointment</button></a>
 <table class="appointments">
   <tr>
-    <th>Name</th>
-    <th>Phone</th>
+    <th>Patient</th>
+    <th>Day</th>
+    <th>Time</th>
+    <th>Entered by</th>
     <th> </th>
     <th> </th>
   </tr>
@@ -21,8 +23,10 @@
   {% for appointment in appointment_list %}
   </tr>
   <tr>
-    <td><strong>{{ appointment.last_name }}</strong>, {{ appointment.first_name }}</td>
-    <td>{{ appointment.phone }}</td>
+    <td>{{ appointment.patient }}</td>
+    <td>{{ appointment.day }}</td>
+    <th>{{ appointment.time }}</th>
+    <th>{{ appointment.user }}</th>
     <td><a href="{% url 'vetoffice:appointmentupdate' appointment.id %}"><button>Edit</button></a></td>
     <td><a href="{% url 'vetoffice:appointmentdelete' appointment.id %}"><button>Delete</button></a></td>
     </tr>

@@ -11,7 +11,7 @@ class Appointment(models.Model):
 	TODO: Create class docstring
 	"""
 	patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
-	employeeID = models.ForeignKey(Employee, on_delete=models.CASCADE)
+	#employeeID = models.ForeignKey(Employee, on_delete=models.CASCADE)
 	day = models.DateField(auto_now=False, auto_now_add=False)
 	time = models.TimeField(auto_now=False, auto_now_add=False)
 	user = models.ForeignKey(User, models.SET_NULL, blank=True, null=True)

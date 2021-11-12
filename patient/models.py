@@ -7,9 +7,7 @@ class Animal(models.Model):
     animal_type = models.CharField(max_length=200, default='Unkown')
 
     def __str__(self):
-        return self.animal_type
-    def breedlist(self):
-        return self.breed_set.all()
+        return str(self.animal_type)
 
     class Meta:
         ordering = ['animal_type']
@@ -19,10 +17,9 @@ class Breed(models.Model):
     breed = models.CharField(max_length=200, default='Unknown')
 
     def __str__(self):
-        return self.breed
+        return str(self.breed)
     def __Str__(self):
-        return self.animal
-
+        return str(self.animal)
 
     class Meta:
         ordering = ['animal']
@@ -49,9 +46,7 @@ class Patient(models.Model):
 
     def __str__(self):
         #Returns pet name and animal_type
-        return "%s %s" % (self.pet_name, self.animal)
-    def __str__(self):
-        return self.breed
+        return "%s, %s" % (self.pet_name, self.animal)
 
     class Meta:
         ordering = ["owner"]
