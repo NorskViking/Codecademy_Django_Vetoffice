@@ -10,23 +10,12 @@ The Vetoffice is a learning project provided in the codecademy skill path, for l
 
 Any and all names and other information used for filling the database and other variables, are complete fabrication, and have no relation to any real physical entities.
 
-## Planed Expansion
-
-* SQL Database
-	* Expanding the database to include several more animals
-	* Adding a description field to the Appointment table, where information of the reason for the appointment can be added(sickness, injury, grooming etc.)
-	* Add several 'patients' with 'owners' and different corresponding 'appointments'
-* Webpage
-	* Expand upon the basic HTML and CSS code provided for the learing project, to create a more pleasing website, with potential for use of login and appointment request.
-* Django
-	* Create an RESTfull API for the django-project.
-
 
 ## Features
 - [x] Owner Registration, Editing and Deletion to/from database.
 - [x] Patient Registration, Editing and Deletion to/from database.
-- [ ] Appointment Registration, Editing and Deletion to/from database.
-- [ ] Website navigation
+- [x] Appointment Registration, Editing and Deletion to/from database.
+- [x] Website navigation
 
 ## Potential Features
  - [ ] User login
@@ -34,33 +23,35 @@ Any and all names and other information used for filling the database and other 
  - [ ] User models for customers
  - [ ] Timetable with occupied/available appointments
  	- [ ] Additional information visible for employees.
- - [ ] Choose breed from expandable list, based on animal type list.
+ - [ ] Get correct list of breeds for chosen animal type.
+ - [ ] Update html with Bootstrap
+ - [ ] Upgrade with Restfull API
 
 
 ## TODO
-- [ ] Models
+- [x] Models
 	- [x] Patient
 	- [x] Owner
-	- [ ] Appointment
-- [ ] Views
+	- [x] Appointment
+- [x] Views
 	- [x] Patient
 	- [x] Owner
-	- [ ] Appointment
-- [ ] Forms
-	- [ ] Patient
-	- [ ] Owner
-	- [ ] Appointment
-- [ ] HTML
+	- [x] Appointment
+- [x] Forms
 	- [x] Patient
 	- [x] Owner
-	- [ ] Appointment
-	- [ ] Base
-	- [ ] Home
+	- [x] Appointment
+- [x] HTML
+	- [x] Patient
+	- [x] Owner
+	- [x] Appointment
+	- [x] Base
+	- [x] Home
 - [ ] Tests
 	- [ ] Patient Model
 	- [ ] Patient Views
 	- [ ] Patient URL
-	- [ ] Owner Model
+	- [x] Owner Model
 	- [ ] Owner Views
 	- [ ] Owner URL
 	- [ ] Appointment Model
