@@ -11,3 +11,29 @@ class OwnerForm(ModelForm):
             'last_name' : 'Family name:',
             'phone' : 'Phone'
         }
+
+        def clean_first_name(self):
+            first_name = self.cleaned_data['first_name']
+            if not first_name:
+                return first_name
+
+            if not first_name[0].isupper():
+                self.add_error('first_name', 'Should start with uppercase letter')
+
+            if first_name.isdigit():
+                self.add_error('first_name', 'Should not contain numbers')
+
+            return first_name
+
+        def clean_last_name(self):
+            last_name = self.cleaned_data['last_name']
+            if not last_name:
+                return last_name
+
+            if not last_name[0].isupper():
+                self.add_error('last_name', 'Should start with uppercase letter')
+
+            if last_name.isdigit():
+                self.add_error('last_name', 'Should not contain numbers')
+
+            return last_name

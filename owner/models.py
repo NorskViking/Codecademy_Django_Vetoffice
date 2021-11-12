@@ -17,12 +17,12 @@ class Owner(models.Model):
 				reurns boolean True if owner have several pets registered with the Vet Office.
 	"""
 	#id = models.BigAutoField(primary_key=True)
-	first_name = models.CharField(max_length=50)
-	last_name = models.CharField(max_length=50)
-	phone = models.CharField(max_length=30)
+	first_name = models.CharField(max_length=100)
+	last_name = models.CharField(max_length=100)
+	phone = models.CharField(max_length=10)
 	def __str__(self):
 		#Returns the first and last name of owner with whitespace between
-		return self.first_name + " " + self.last_name
+		return '%s, %s' % (self.last_name, self.first_name)
 
 	def has_multiple_pets(self):
 		'''Do Owner have multiple pets.
