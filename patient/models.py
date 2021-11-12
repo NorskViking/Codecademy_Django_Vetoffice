@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import CharField
 from owner.models import Owner
 
 # Create your models here.
@@ -7,6 +8,8 @@ class Animal(models.Model):
 
     def __str__(self):
         return self.animal_type
+    def breedlist(self):
+        return self.breed_set.all()
 
     class Meta:
         ordering = ['animal_type']

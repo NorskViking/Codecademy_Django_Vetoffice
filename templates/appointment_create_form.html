@@ -1,0 +1,14 @@
+{% extends './base.html' %}
+<!--
+  Uses the Django form functionality to create a simple HTML/CSS form.
+-->
+{% block content %}
+<h2>Register new Appointment</h2>
+<form method="post">
+  <div>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" />
+  </div>
+</form>
+{% endblock %}

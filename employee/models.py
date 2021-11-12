@@ -19,7 +19,7 @@ class Employee(models.Model):
     last_name = models.CharField(max_length=200)
     title = models.CharField(max_length=5, choices=TITLE_CHOICE, default='Dr.')
     phone = models.CharField(max_length=10)
-    email = models.CharField(max_length=200, default="last_name@vetoffice.com")
+    email = models.CharField(max_length=200)
     #available = boolean
 
     def __str__(self):

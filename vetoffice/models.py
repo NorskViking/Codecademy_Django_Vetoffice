@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 #TODO: Create Docstring comments for classes and functions
 from patient.models import Patient
 from employee.models import Employee
@@ -9,8 +10,12 @@ class Appointment(models.Model):
 	"""
 	TODO: Create class docstring
 	"""
-	appointmentID = models.BigAutoField(primary_key=True)
-	patientID = models.ForeignKey(Patient, on_delete=models.CASCADE)
+	patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
 	employeeID = models.ForeignKey(Employee, on_delete=models.CASCADE)
-	#date = models.DateField()
-	#information = models.CharField(max_length=1000, requiered=False, default='')
+	day = models.DateField(auto_now=False, auto_now_add=False)
+	time = models.TimeField(auto_now=False, auto_now_add=False)
+	user = models.ForeignKey(User, models.SET_NULL, blank=True, null=True)
+	information = models.CharField(max_length=2000, default='')
+
+	def __str__(self):
+		return self.patient.__str__() + "\t" + str(self.day.day) + " " + str(self.day.month) + " " + str(self.day.year) + " " + str(self.time.hour) + " " + str(self.time.min)

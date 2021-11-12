@@ -15,6 +15,7 @@ class EmployeeCreate(CreateView):
     template_name = 'employee_create_form.html'
     form_class = EmployeeForm
     success_url = reverse_lazy('employee:employeelist')
+    initial = {'email': 'lastname@vetoffice.com'}
 
 class EmployeeUpdate(UpdateView):
     model = Employee
