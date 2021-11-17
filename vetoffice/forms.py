@@ -7,8 +7,8 @@ from vetoffice.models import Appointment
 class AppointmentForm(forms.ModelForm):
     class Meta:
         model = Appointment
-        fields = ('patient', 'day', 'time', 'information')
+        fields = ('patient', 'day', 'time', 'employee', 'information')
         widgets = {
             'day': SelectDateWidget(),
-            #'time': forms.TimeInput(attrs={'type': 'time'}),
+            'time': forms.TimeInput(attrs={'type': 'time'}),
         }

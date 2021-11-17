@@ -3,6 +3,17 @@ from django.forms import ModelForm, TextInput
 from owner.models import Owner
 
 class OwnerForm(ModelForm):
+    """ Owner ModelForm
+
+    model: Owner
+
+    fields: first_name, last_name, phone
+
+    Functions:  clean_first_name()
+                    - Cleans the data, and add errors if name does not start with uppercase or include an Integer.
+                clean_last_name()
+                    - Cleans the data, and add errors if name does not start with uppercase or include an Integer.
+    """
     class Meta:
         model = Owner
         fields = ['first_name', 'last_name', 'phone']

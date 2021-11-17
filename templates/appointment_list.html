@@ -8,14 +8,14 @@
   Button(Delete): Links to the appointment_delete_form.html, makes it poosible to remove a appointment from the List.
 -->
 {% block content %}
-<h2>Appointment List</h2>
-<a href="{% url 'vetoffice:appointmentcreate' %}"><button class"btn">Add Appointment</button></a>
+<h2>Appointments</h2>
+<a href="{% url 'vetoffice:appointmentcreate' %}"><button class"btn">Request Appointment</button></a>
 <table class="appointments">
   <tr>
     <th>Patient</th>
     <th>Day</th>
     <th>Time</th>
-    <th>Entered by</th>
+    <th>Veterinary</th>
     <th> </th>
     <th> </th>
   </tr>
@@ -26,7 +26,7 @@
     <td>{{ appointment.patient }}</td>
     <td>{{ appointment.day }}</td>
     <th>{{ appointment.time }}</th>
-    <th>{{ appointment.user }}</th>
+    <th>{{ appointment.employee }}</th>
     <td><a href="{% url 'vetoffice:appointmentupdate' appointment.id %}"><button>Edit</button></a></td>
     <td><a href="{% url 'vetoffice:appointmentdelete' appointment.id %}"><button>Delete</button></a></td>
     </tr>

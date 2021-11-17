@@ -25,27 +25,28 @@ class SignUp(CreateView):
     success_url = reverse_lazy('login')
     template_name = 'registration/signup.html'
 
-class AppointmentList(LoginRequiredMixin, ListView):
+class AppointmentList(ListView):
     model = Appointment
     template_name = 'appointment_list.html'
 
-class AppointmentCreate(LoginRequiredMixin, CreateView):
+class AppointmentCreate(CreateView):
     model = Appointment
     template_name = 'appointment_create_form.html'
     form_class = AppointmentForm
     success_url = reverse_lazy('vetoffice:appointmentcreate')
 
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super().form_valid(form)
 
-class AppointmentUpdate(LoginRequiredMixin, UpdateView):
+    #def form_valid(self, form):
+    #    form.instance.user = self.request.user
+    #    return super().form_valid(form)
+
+class AppointmentUpdate(UpdateView):
     model = Appointment
     template_name = 'appointment_create_form.html'
     form_class = AppointmentForm
     success_url = reverse_lazy('vetoffice:appointmentupdate')
 
-class AppointmentDelete(LoginRequiredMixin, DeleteView):
+class AppointmentDelete(DeleteView):
     model = Appointment
     template_name = 'appointment_create_form.html'
     form_class = AppointmentForm

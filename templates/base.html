@@ -9,15 +9,20 @@ subsequent html files will extend from this base file.
 
 <head>
 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<!--
+  A top oriented navigation bar, that lets the user navigate between the different pages of the Vetoffice webpage.
 
+-->
   <div class="navbar">
-    <a href="{% url 'vetoffice:home' %}">Home</a>
-    <a href="{% url 'owner:ownerlist' %}">Owners</a>
+    <a href="{% url 'vetoffice:home' %}"><strong>Home</strong></a>
     <a href="{% url 'patient:patientlist' %}">Patients</a>
+    <a href="{% url 'owner:ownerlist' %}">Owners</a>
+    <!--
     <a href="{% url 'patient:animallist' %}">Animals</a>
     <a href="{% url 'patient:breedlist' %}">Breeds</a>
-    <a href="{% url 'employee:employeelist' %}">Employees</a>
+    -->
     <a href="{% url 'vetoffice:appointmentlist' %}">Appointments</a>
+    <a href="{% url 'employee:employeelist' %}">Employees</a>
   </div>
 
 </head>

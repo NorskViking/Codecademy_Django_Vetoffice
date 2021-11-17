@@ -14,6 +14,7 @@ class Appointment(models.Model):
 	#employeeID = models.ForeignKey(Employee, on_delete=models.CASCADE)
 	day = models.DateField(auto_now=False, auto_now_add=False)
 	time = models.TimeField(auto_now=False, auto_now_add=False)
+	employee = models.ForeignKey(Employee, on_delete=models.CASCADE)
 	user = models.ForeignKey(User, models.SET_NULL, blank=True, null=True)
 	information = models.CharField(max_length=2000, default='')
 

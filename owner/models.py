@@ -1,7 +1,6 @@
 from django.db import models
 
 # Create your models here.
-# Create your models here.
 class Owner(models.Model):
 	#The Owner table, with OwnerID as primary key
 	#Owner can own several pets
@@ -9,7 +8,7 @@ class Owner(models.Model):
 
 	Primary Key: OwnerID, used as Foreign Key for paitient
 
-	Fields: first_name(String), last_name(string), phone(string(of numbers))
+	Fields: first_name(String), last_name(string), phone(Integer)
 
 	__str__ for easy coupling first and last name of owner.
 
@@ -19,7 +18,7 @@ class Owner(models.Model):
 	#id = models.BigAutoField(primary_key=True)
 	first_name = models.CharField(max_length=100)
 	last_name = models.CharField(max_length=100)
-	phone = models.CharField(max_length=10)
+	phone = models.IntegerField()
 	def __str__(self):
 		#Returns the first and last name of owner with whitespace between
 		return '%s, %s' % (self.last_name, self.first_name)
