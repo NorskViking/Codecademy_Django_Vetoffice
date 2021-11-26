@@ -2,8 +2,6 @@ from django.db import models
 
 # Create your models here.
 class Owner(models.Model):
-	#The Owner table, with OwnerID as primary key
-	#Owner can own several pets
 	"""Create the Owner SQLite Table.
 
 	Primary Key: OwnerID, used as Foreign Key for paitient

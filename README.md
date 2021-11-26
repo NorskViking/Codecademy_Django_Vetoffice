@@ -15,6 +15,7 @@ Any and all names and other information used for filling the database and other 
 - [x] Owner Registration, Editing and Deletion to/from database.
 - [x] Patient Registration, Editing and Deletion to/from database.
 - [x] Appointment Registration, Editing and Deletion to/from database.
+- [x] Employee Registration, Editing and Deletion to/from database.
 - [x] Website navigation
 
 ## Potential Features
@@ -33,18 +34,22 @@ Any and all names and other information used for filling the database and other 
 	- [x] Patient
 	- [x] Owner
 	- [x] Appointment
+  - [x] Employee
 - [x] Views
 	- [x] Patient
 	- [x] Owner
 	- [x] Appointment
+  - [x] Employee
 - [x] Forms
 	- [x] Patient
 	- [x] Owner
 	- [x] Appointment
+  - [x] Employee
 - [x] HTML
 	- [x] Patient
 	- [x] Owner
 	- [x] Appointment
+  - [x] Employee
 	- [x] Base
 	- [x] Home
 - [ ] Tests
@@ -57,10 +62,15 @@ Any and all names and other information used for filling the database and other 
 	- [ ] Appointment Model
 	- [ ] Appointment Views
 	- [ ] Appointment URL
+  - [ ] Employee Model
+	- [ ] Employee Views
+	- [ ] Employee URL
 	- [ ] Error handling
 - [ ] Documentation
-	- [ ] Comprehensive comments
-	- [ ] Docstring documentation
+  - [ ] Patient
+  - [ ] Owner
+  - [ ] Appointment
+  - [x] Employee
 
 
 ## Key Topics

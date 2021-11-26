@@ -13,6 +13,7 @@ class Employee(models.Model):
 
     TODO: Add function to determine if the Employee is available for requested appointment.
     """
+    # An array of professional titles for employees.
     TITLE_CHOICE = [
         ('MR.', 'Mr.'),
         ('MISS.', 'Miss.'),
